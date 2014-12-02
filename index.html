@@ -10,7 +10,11 @@
 	<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
-<div class="post">
+<form id="board-select">
+	Board name: /<input id="boardname" width="5">/
+	<input id="speak-forever" type="submit" value="Speak"/>
+</form>
+<div class="post" style="display: none;">
 <img id="post_image"/>
 <div id="post_comment">
 </div>
@@ -19,7 +23,15 @@
 <div id="status"></div>
 <script>
 $(function() {
-	speakBoardForever("cyber");	
+	log("Initialized");
+	$("#board-select").submit(function() {
+		$("#board-select").hide();
+		$(".post").show();
+		
+		speakBoardForever($("#boardname").val());
+
+		return false;
+	});
 });
 </script>
 </body>

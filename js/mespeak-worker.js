@@ -14,7 +14,7 @@ function sayPost(data) {
 	for (i = 0; i < lines.length; i++) {
 		line = lines[i];
 		if (line.lastIndexOf(">>>", 0) === 0) {
-			parts.push({text: "Go to " + line.slice(3), variant: "f2"});
+			parts.push({text: line.slice(3), variant: "f2"});
 		} else if (line.lastIndexOf(">>", 0) === 0) {
 			parts.push({text: line.slice(2), variant: "f2"});
 		} else if (line.lastIndexOf(">", 0) === 0) {
