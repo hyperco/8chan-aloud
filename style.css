@@ -1,0 +1,40 @@
+body {
+	font-family: sans-serif;
+}
+
+.post {
+	margin: 1em;
+	background: #efe;
+	padding: 1em;
+}
+
+.post:after {
+	clear: both;
+}
+
+.post img {
+	float: left;
+	padding: 1em;
+	max-width: 50%;
+	max-height: 50%;
+	width: auto;
+	box-model: border-box;
+}
+
+.not-active {
+	opacity: 0.75;
+}
+
+#status {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	border-top: 1px solid #ddd;
+	padding: 3px;
+	box-model: border-box;
+	background-color: #eee;
+}
+.clearfix {
+	clear:both;
+}
